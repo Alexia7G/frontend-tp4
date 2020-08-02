@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text } from "react-native";
 
-export default function Cuenta() {
+export default function UserGuest() {
   return (
     <View>
-      <Text>Mi cuenta</Text>
+      <Text>UserGuest</Text>
     </View>
   );
 }

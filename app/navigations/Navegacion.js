@@ -6,7 +6,9 @@ import InicioStack from "./InicioStack";
 import FavoritosStack from "./FavoritosStack";
 import CuentaStack from "./CuentaStack";
 
-import Cuenta from "../screens/Cuenta";
+import Cuenta from "../screens/Cuenta/Cuenta";
+import Login from "../screens/Cuenta/Login";
+import Registro from "../screens/Cuenta/Registro";
 
 const MyTheme = {
   dark: false,
@@ -66,7 +68,7 @@ export default function Navegacion() {
         />
         <Tab.Screen
           name="mapa"
-          component={Cuenta}
+          component={Registro}
           options={{ title: "Vista Mapa" }}
         />
         <Tab.Screen
