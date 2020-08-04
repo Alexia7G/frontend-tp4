@@ -8,7 +8,7 @@ export default function Registro() {
   return (
     <KeyboardAwareScrollView>
       <Image
-        source={require("../../../assets/img/logo-prueba.png")}
+        source={require("../../../assets/img/login.png")}
         resizeMode="contain"
         style={styles.logo}
       />
