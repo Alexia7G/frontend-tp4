@@ -5,10 +5,12 @@ import { Icon } from "react-native-elements";
 import InicioStack from "./InicioStack";
 import FavoritosStack from "./FavoritosStack";
 import CuentaStack from "./CuentaStack";
+import LoginStack from "./LoginStack";
 
 import Cuenta from "../screens/Cuenta/Cuenta";
 import Login from "../screens/Cuenta/Login";
 import Registro from "../screens/Cuenta/Registro";
+import Inicio from "../screens/Inicio";
 
 const MyTheme = {
   dark: false,
@@ -38,7 +40,7 @@ const screenOptions = (route, color) => {
       iconName = "account-circle";
       break;
     case "favoritos":
-      iconName = "account-circle-outline";
+      iconName = "heart";
       break;
     default:
       break;
@@ -54,8 +56,8 @@ export default function Navegacion() {
       <Tab.Navigator
         initialRouteName="inicio"
         tabBarOptions={{
-          inactiveTintColor: "#646464",
-          activeTintColor: "pink",
+          inactiveTintColor: "#7F42A4",
+          activeTintColor: "#F788E1",
         }}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ color }) => screenOptions(route, color),
@@ -63,12 +65,12 @@ export default function Navegacion() {
       >
         <Tab.Screen
           name="inicio"
-          component={InicioStack}
+          component={Inicio}
           options={{ title: "Inicio" }}
         />
         <Tab.Screen
           name="mapa"
-          component={Registro}
+          component={LoginStack}
           options={{ title: "Vista Mapa" }}
         />
         <Tab.Screen

@@ -1,12 +1,13 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView, Image } from "react-native";
 import { Divider } from "react-native-elements";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Login() {
   return (
     <ScrollView>
       <Image
-        source={require("../../../assets/img/logo-prueba.png")}
+        source={require("../../../assets/img/login.png")}
         resizeMode="contain"
         style={styles.logo}
       />
@@ -20,10 +21,15 @@ export default function Login() {
 }
 
 const CrearUsuario = () => {
+  const navigation = useNavigation();
+
   return (
     <Text style={styles.textCrear}>
       ¿Todavía no tienes una cuenta?{" "}
-      <Text style={styles.btnCrear} onPress={() => console.log("registro..")}>
+      <Text
+        style={styles.btnCrear}
+        onPress={() => navigation.navigate("registro")}
+      >
         Regístrate
       </Text>
     </Text>
