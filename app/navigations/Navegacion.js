@@ -10,7 +10,7 @@ import LoginStack from "./LoginStack";
 import Cuenta from "../screens/Cuenta/Cuenta";
 import Login from "../screens/Cuenta/Login";
 import Registro from "../screens/Cuenta/Registro";
-import Inicio from "../screens/Inicio";
+import Inicio from "../screens/Restaurante/Inicio";
 
 const MyTheme = {
   dark: false,
@@ -54,7 +54,7 @@ export default function Navegacion() {
   return (
     <NavigationContainer theme={MyTheme}>
       <Tab.Navigator
-        initialRouteName="inicio"
+        initialRouteName="Inicio"
         tabBarOptions={{
           inactiveTintColor: "#7F42A4",
           activeTintColor: "#F788E1",
