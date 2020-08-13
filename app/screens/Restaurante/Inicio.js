@@ -13,7 +13,21 @@ import ListaRestaurantes from "../../componentes/Restaurantes/ListaRestauranes";
 
 export default function Inicio() {
   return (
-    <View style={styles.viewBody}>
+    <View>
+      <View style={styles.viewFondo}>
+        <ImageBackground
+          source={require("../../../assets/img/fondo.png")}
+          resizeMode="cover"
+          style={styles.logo}
+        />
+
+        <View style={styles.viewContenido}>
+          <ListaRestaurantes />
+        </View>
+      </View>
+    </View>
+
+    /* <View style={styles.viewBody}>
       <ListaRestaurantes />
       <Icon
         reverse
@@ -22,7 +36,7 @@ export default function Inicio() {
         color="#7F42A4"
         containerStyle={styles.btnContainer}
       />
-    </View>
+    </View> */
   );
 }
 
@@ -39,6 +53,21 @@ const styles = StyleSheet.create({
     /* shadowColor: "black",
     shadowOffset: { width: 2, height: 2 },
     shadowOpacity: 0.5, */
+  },
+  viewFondo: {
+    marginTop: 25,
+    width: "100%",
+    height: "100%",
+    marginBottom: 0,
+  },
+  viewContenido: {
+    width: "100%",
+    height: "80%",
+    marginTop: "-50%",
+  },
+  logo: {
+    width: "100%",
+    height: "65%",
   },
 });
 

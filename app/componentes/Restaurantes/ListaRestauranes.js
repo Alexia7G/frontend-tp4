@@ -60,7 +60,7 @@ const Restaurant = (props) => {
   return (
     <TouchableOpacity onPress={goRestaurant}>
       <View style={styles.viewRestaurante}>
-        <Card title={name} image={image}>
+        <Card title={name} image={image} containerStyle={{ borderRadius: 10 }}>
           <Text style={{ marginBottom: 10 }}>{address}</Text>
         </Card>
         {/* <View style={styles.viewRestImage}>
