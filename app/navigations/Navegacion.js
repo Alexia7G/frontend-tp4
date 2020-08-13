@@ -11,6 +11,7 @@ import Cuenta from "../screens/Cuenta/Cuenta";
 import Login from "../screens/Cuenta/Login";
 import Registro from "../screens/Cuenta/Registro";
 import Inicio from "../screens/Restaurante/Inicio";
+import Favoritos from "../screens/Favoritos";
 
 const MyTheme = {
   dark: false,
@@ -75,12 +76,12 @@ export default function Navegacion() {
         />
         <Tab.Screen
           name="cuenta"
-          component={CuentaStack}
+          component={Cuenta}
           options={{ title: "Mi cuenta" }}
         />
         <Tab.Screen
           name="favoritos"
-          component={FavoritosStack}
+          component={Favoritos}
           options={{ title: "Favoritos" }}
         />
       </Tab.Navigator>
